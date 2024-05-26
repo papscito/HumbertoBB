@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-yellow: #9411ba;
+    --color-medium-yellow: #db6fff;
+    --color-light-yellow: #fcf3ff;
+    --color-pink: #1766de;
+    --color-medium-pink: #5bbbff;
+    --color-light-pink: #eff8ff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-light-yellow);
+}
+
+#content {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: none;
+    /* Initially hidden */
+    opacity: 0;
+    transition: opacity 1s ease;
+    /* Transition for opacity */
+}
+
+#content.appear {
+    opacity: 1;
+}
+
+
+#question {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#question.appear {
+    opacity: 1;
+}
+
+#question.fade-out {
+    opacity: 0;
+}
+
+#questionText {
+    font-size: 1.5em;
+    color: var(--color-pink);
+    transition: color 0.3s;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#content.appear {
+    opacity: 1;
+}
+
+
+
+
+
+#yesBtn,
+#noBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    font-size: 2em;
+    color: var(--color-pink);
+    background-color: var(--color-light-pink);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: color 0.3s;
+    transition: width 0.5s ease;
+}
+
+#yesBtn {
+    float: left;
+}
+
+#noBtn {
+    float: right;
+}
+
+#yesBtn {
+    background-color: var(--color-light-yellow);
+    color: var(--color-yellow);
+
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+}
+
+#noBtn {
+    background-color: var(--color-light-pink);
+    color: var(--color-pink);
+
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#yesBtn:hover{
+    background-color: var(--color-medium-yellow);
+    color: var(--color-light-yellow);
+}
+
+#noBtn:hover{
+    background-color: var(--color-medium-pink);
+    color: var(--color-light-pink);
+}
+
+#showQuestionBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: var(--color-pink);
+    background-color: transparent;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+
+#response {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+#response.appear {
+    opacity: 1;
+}
+
+#response.fade-out {
+    opacity: 0;
+}
+
+#responseText {
+    font-size: 1.5em;
+    color: var(--color-pink);
+    transition: color 0.3s;
+}
+
+#content.fade-out {
+    opacity: 0;
+}
+
+#animationContainer{
+    opacity: .2;
+}
+
+#animationContainer2{
+    opacity: .05;
+}
+
